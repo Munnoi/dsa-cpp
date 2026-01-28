@@ -5,11 +5,9 @@ using namespace std;
 // TODO: Review this code
 int maximumPerimeterTriangleV1(vector<int>& arr) {
     sort(arr.rbegin(), arr.rend());
-    for (size_t i = 0; i < arr.size() - 2; ++i) {
+    for (size_t i = 0; i < arr.size() - 2; ++i)
         if (arr[i] < arr[i + 1] + arr[i + 2]) {
             return arr[i] + arr[i + 1] + arr[i + 2];
-        }
-    }
     return 0;
 }
 
