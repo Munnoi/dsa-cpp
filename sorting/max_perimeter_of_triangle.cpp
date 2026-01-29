@@ -15,15 +15,11 @@ int maximumPerimeterTriangleV1(vector<int>& arr) {
 // TODO: Review this code
 int maximumPerimeterTriangleV2(vector<int>& arr) {
     int maxPerimeter = 0;
-    for (int i = 0; i < arr.size(); ++i) {
-        for (int j = i + 1; j < arr.size(); ++j) {
-            for (int k = j + 1; k < arr.size(); ++k) {
-                if (arr[i] + arr[j] > arr[k] && arr[j] + arr[k] > arr[i] && arr[k] + arr[i] > arr[j]) {
+    for (int i = 0; i < arr.size(); ++i)
+        for (int j = i + 1; j < arr.size(); ++j)
+            for (int k = j + 1; k < arr.size(); ++k)
+                if (arr[i] + arr[j] > arr[k] && arr[j] + arr[k] > arr[i] && arr[k] + arr[i] > arr[j])
                     maxPerimeter = max(maxPerimeter, arr[i] + arr[j] + arr[k]);
-                }
-            }
-        }
-    }
     return maxPerimeter;
 }
 int main() {
