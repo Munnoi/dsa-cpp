@@ -2,9 +2,8 @@
 using namespace std;
 
 // Time - O(n), Space - O(1)
-// TODO: Review this code
 int maximumPerimeterTriangleV1(vector<int>& arr) {
-    sort(arr.rbegin(), arr.rend());
+    sort(arr.rbegin(), arr.rend()); // Sort in descending order
     for (size_t i = 0; i < arr.size() - 2; ++i)
         if (arr[i] < arr[i + 1] + arr[i + 2]) {
             return arr[i] + arr[i + 1] + arr[i + 2];
@@ -12,7 +11,6 @@ int maximumPerimeterTriangleV1(vector<int>& arr) {
 }
 
 // Time - O(n^3), Space - O(1)
-// TODO: Review this code
 int maximumPerimeterTriangleV2(vector<int>& arr) {
     int maxPerimeter = 0;
     for (int i = 0; i < arr.size(); ++i)
